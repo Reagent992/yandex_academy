@@ -1,20 +1,22 @@
 a = int(input())
 b = int(input())
-c = set()
-d = set()
+set_of_kids = list()
 
-for i in range(a):
-    c.add(input())
+for i in range(a + b):
+    set_of_kids.append(input())
 
-for i in range(b):
-    d.add(input())
+set_of_kids2 = set_of_kids.copy()
 
-g = c.symmetric_difference(d)
-g = list(g)
-g = sorted(g)
-if len(g) > 0:
-    for i in g:
+for i2 in set_of_kids:
+    if i2 in set_of_kids2:
+        f = set_of_kids2.count(i2)
+        if f > 1:
+            for j in range(f):
+                set_of_kids2.remove(i2)
+
+f1 = sorted(set_of_kids2)
+if f1:
+    for i in f1:
         print(i)
 else:
     print('Таких нет')
-
