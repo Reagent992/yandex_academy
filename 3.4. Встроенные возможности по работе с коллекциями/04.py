@@ -1,4 +1,5 @@
 from itertools import accumulate
 
-for value in accumulate(input().split()):
+a = input().split()
+for value in accumulate(a):
     print(value)

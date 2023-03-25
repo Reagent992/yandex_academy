@@ -1,6 +1,13 @@
-text = "Привет, мир!"
-print(text[8:11])
-print(text[:6])
-print(text[8:])
-print(text[:])
-print(text[::2])
+# Дайте чего-нибудь новенького!
+# Верно.
+today_menu = set()
+weeks_menu = set()
+[today_menu.add(input()) for i in range(int(input()))]
+[weeks_menu.add(input()) for i2 in range(int(input())) for i3 in
+ range(int(input()))]
+
+dif = today_menu - weeks_menu
+if dif:
+    [print(i) for i in sorted(dif)]
+else:
+    print('Готовить нечего')
