@@ -1,16 +1,14 @@
 # Словарная ёлка
-# Верно.
-from itertools import accumulate
-
-local_tests = False
+# Решение рабочее, но по заданию нужно использовать accumulate
+local_tests = True
 
 
 def main(list_of_words):
     """ a = ['мама', 'мыла', 'раму']"""
-    result = list(accumulate(
-        list_of_words,
-        lambda first, second: first + ' ' + second))
-    return '\n'.join(result)
+    answer = []
+    for index, word in enumerate(list_of_words):
+        answer.append(' '.join(list_of_words[0:index + 1]))
+    return '\n'.join(answer)
 
 
 def tests():
