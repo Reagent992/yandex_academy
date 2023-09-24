@@ -33,5 +33,5 @@ for lines in lines:
         else:
             answer.append(letter)
 
-with open("transliteration.txt", "w", encoding="UTF-8") as file_out:
+with open("second.txt", "w", encoding="UTF-8") as file_out:
     file_out.writelines(''.join(answer))
