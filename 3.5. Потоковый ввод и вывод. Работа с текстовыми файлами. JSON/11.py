@@ -9,7 +9,7 @@ import json
 # input_txt_file_name = input()
 # output_json_file_name = input()
 input_txt_file_name = 'numbers.txt'
-output_json_file_name = 'statistics.json'
+output_json_file_name = 'scoring.json'
 numbers_array = list()
 
 with open(input_txt_file_name, encoding="UTF-8") as file_in:
